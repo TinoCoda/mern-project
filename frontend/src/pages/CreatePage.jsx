@@ -1,5 +1,5 @@
-import { Box, Container, Text, VStack ,Heading, useColorModeValue, Input, Button} from "@chakra-ui/react"
-import React, { useState } from 'react'
+import { Box, Container, Text, VStack ,Heading, useColorModeValue, Input, Button, useToast} from "@chakra-ui/react"
+import React, { use, useState } from 'react'
 import { useProductStore } from "../store/product";
 
 
@@ -9,6 +9,8 @@ function CreatePage() {
         price: "",
         image: "",
     });
+
+    const toast=useToast();
 
     const {createProduct} = useProductStore();
 
@@ -21,6 +23,22 @@ function CreatePage() {
             image: "",
         });// arasing the input fields after adding the product
         console.log(success,message);
+
+        if(success){
+            toast({
+                title: "Success",
+                description: message,
+                status: "success",
+                isClosable: true,
+            });
+        }else{
+            toast({
+                title: "Error",
+                description: message,
+                status: "error",
+                isClosable: true,
+            });
+        }
 
 
         console.log(newProduct);
