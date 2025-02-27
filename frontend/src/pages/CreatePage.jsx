@@ -1,13 +1,11 @@
-import React from 'react'
-import { Button } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 
-const CreatePage = () => {
+function CreatePage() {
+    console.log("CreatePage loaded");
   return (
-    <>
-    <div>CreatePage</div>
-     <Button >Hello </Button> 
-    </>
-
+    <Box p={4}>
+      <Text fontSize="xl">Create a New Item</Text>
+    </Box>
   )
 }
 

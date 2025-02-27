@@ -1,9 +1,11 @@
-import React from 'react'
+import { Box, Text } from "@chakra-ui/react"
 
-const HomePage = () => {
-  console.log("HomePage loaded!") 
+function HomePage() {
+    console.log("HomePage");
   return (
-    <div>HomePage</div>
+    <Box p={4}>
+      <Text fontSize="xl">Welcome to HomePage</Text>
+    </Box>
   )
 }
 
