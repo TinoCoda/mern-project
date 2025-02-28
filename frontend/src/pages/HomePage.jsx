@@ -1,4 +1,5 @@
 import { Box, Container, SimpleGrid, Text, VStack } from "@chakra-ui/react"
+import ProductCard from "../components/ProductCard";
 import { Link } from "react-router-dom";
 import { useProductStore } from "../store/product";
 import { useEffect } from "react";
@@ -34,8 +35,15 @@ function HomePage() {
           spacing={10}
           w={"full"}
           >
+            {products.map((product) => {
+                return(
+                  <ProductCard key={product.id} product={product} />  
+                );
+
+            })}
 
         </SimpleGrid>
+        {products.length ===0 && 
 
         <Text fontSize='xl' textAlign={"center"} fontWeight='bold' color='gray.500'>
 						No products found 😢{" "}
@@ -45,6 +53,7 @@ function HomePage() {
 							</Text>
 						</Link>
 					</Text>
+        }
 
        
     </VStack>
