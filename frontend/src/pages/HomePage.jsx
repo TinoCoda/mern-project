@@ -37,7 +37,7 @@ function HomePage() {
           >
             {products.map((product) => {
                 return(
-                  <ProductCard key={product.id} product={product} />  
+                  <ProductCard key={product._id} product={product} />  
                 );
 
             })}
