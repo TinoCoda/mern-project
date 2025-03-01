@@ -1,4 +1,4 @@
-import { Box, Container, SimpleGrid, Text, VStack } from "@chakra-ui/react"
+import {  Container, SimpleGrid, Text, VStack } from "@chakra-ui/react"
 import ProductCard from "../components/ProductCard";
 import { Link } from "react-router-dom";
 import { useProductStore } from "../store/product";

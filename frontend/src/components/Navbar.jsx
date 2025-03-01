@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <Container maxW="1140px" px={4} >
         <Flex h={16} 
-        alineItems={"center"}
+        alignItems={"center"}
         justifyContent={"space-between"}
         flexDir={
             {
